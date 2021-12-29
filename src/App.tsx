@@ -27,9 +27,9 @@ export function App({ title }: Props) {
   };
 
   return (
-    <div style={{ height: "100vh" }}>
+    <div>
       {/* Navbar */}
-      <nav className="navbar navbar-dark bg-primary">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-0">
         <div className="container">
           <a href="/" className="navbar-brand">
             <img src={logo} alt="React Logo" style={{ width: "4rem" }} />
