@@ -1,6 +1,6 @@
 # Simple To-Do app with React and Typescript
 
-It was created with [React](https://reactjs.org) `17.0.2` and [Bootswatch](https://github.com/thomaspark/bootswatch/) with [Vapor theme](https://bootswatch.com/vapor/).
+It was created with [React](https://reactjs.org) `17.0.2` and [Bootswatch](https://github.com/thomaspark/bootswatch/) with [Cyborg theme](https://bootswatch.com/cyborg/).
 
 ---
 
