@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Simple To-Do app with React and Typescript
+
+It was created with [React](https://reactjs.org) `17.0.2` and [Bootswatch](https://github.com/thomaspark/bootswatch/) with [Vapor theme](https://bootswatch.com/vapor/).
+
+---
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
