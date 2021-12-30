@@ -9,6 +9,7 @@ interface Props {
 export default function TaskList({ tasks, deleteATask }: Props) {
   return (
     <>
+      <h3>All tasks</h3>
       {tasks.map((task) => (
         <div className="col-md-4 pb-2" key={task.id.valueOf()}>
           <TaskCard task={task} deleteATask={deleteATask} />

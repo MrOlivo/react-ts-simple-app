@@ -27,33 +27,36 @@ export default function TaskForm({ addANewTask }: Props) {
   };
 
   return (
-    <div className="card border-primary">
-      <div className="card-body">
-        <h4 className="card-title">Add Task</h4>
-        <form onSubmit={handleNewTask}>
-          <input
-            type="text"
-            placeholder="Write a title"
-            name="title"
-            className="form-control mb-3"
-            onChange={handleInputChange}
-            value={task.title}
-            required
-          />
-          <textarea
-            name="description"
-            rows={2}
-            placeholder="Write a description"
-            className="form-control mb-3"
-            onChange={handleInputChange}
-            value={task.description}
-            required
-          ></textarea>
-          <button type="submit" className="btn btn-primary">
-            Add task
-          </button>
-        </form>
+    <>
+      <h3>Form</h3>
+      <div className="card border-primary">
+        <div className="card-body">
+          <h4 className="card-title">Add Task</h4>
+          <form onSubmit={handleNewTask}>
+            <input
+              type="text"
+              placeholder="Write a title"
+              name="title"
+              className="form-control mb-3"
+              onChange={handleInputChange}
+              value={task.title}
+              required
+            />
+            <textarea
+              name="description"
+              rows={2}
+              placeholder="Write a description"
+              className="form-control mb-3"
+              onChange={handleInputChange}
+              value={task.description}
+              required
+            ></textarea>
+            <button type="submit" className="btn btn-primary">
+              Add task
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
