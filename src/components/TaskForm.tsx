@@ -22,12 +22,12 @@ export default function TaskForm({ addANewTask }: Props) {
 
   const handleNewTask = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    addANewTask({ ...task, id: getCurrentTimestamp() });
+    addANewTask({ id: getCurrentTimestamp(), ...task, completed: false });
     setTask(initialState);
   };
 
   return (
-    <div className="card">
+    <div className="card border-primary">
       <div className="card-body">
         <h4 className="card-title">Add Task</h4>
         <form onSubmit={handleNewTask}>
