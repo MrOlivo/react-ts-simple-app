@@ -6,8 +6,10 @@ interface Props {
 }
 
 export default function TaskCard({ task, deleteATask }: Props) {
+  let alert_color = task.completed ? "alert-danger" : "alert-primary";
+
   return (
-    <div className="alert alert-dismissible alert-primary">
+    <div className={"alert alert-dismissible " + alert_color}>
       <button
         type="button"
         className="btn-close"
