@@ -1,16 +1,16 @@
-import { useState } from "react";
 import "./App.css";
 import logo from "./logo.svg";
 import { Task } from "./interfaces/Task.Interface";
 import TaskList from "./components/TaskList";
 import TaskForm from "./components/TaskForm";
+import { useLocalStorage } from "./hooks/useLocalStorage";
 
 interface Props {
   title?: string;
 }
 
 export function App({ title }: Props) {
-  const [tasks, setTasks] = useState<Task[]>([
+  const [tasks, setTasks] = useLocalStorage<Task[]>("tasks", [
     {
       id: 1,
       title: "Add more tasks",
@@ -25,6 +25,8 @@ export function App({ title }: Props) {
   const deleteATask = (id: number) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
+
+  console.log(tasks);
 
   return (
     <div>
