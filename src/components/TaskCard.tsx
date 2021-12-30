@@ -7,18 +7,14 @@ interface Props {
 
 export default function TaskCard({ task, deleteATask }: Props) {
   return (
-    <div className="card">
-      <div className="card-body">
-        <h4 className="card-title">{task.title}</h4>
-        <p className="d-none">{task.id}</p>
-        <p>{task.description}</p>
-        <button
-          className="btn btn-danger"
-          onClick={() => deleteATask(task.id.valueOf())}
-        >
-          Delete
-        </button>
-      </div>
+    <div className="alert alert-dismissible alert-primary">
+      <button
+        type="button"
+        className="btn-close"
+        onClick={() => deleteATask(task.id.valueOf())}
+      ></button>
+      <h4 className="alert-heading">{task.title}</h4>
+      <p>{task.description}</p>
     </div>
   );
 }
