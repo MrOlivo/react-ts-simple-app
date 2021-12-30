@@ -17,6 +17,7 @@ export default function TaskCard({ task, deleteATask }: Props) {
       ></button>
       <h4 className="alert-heading">{task.title}</h4>
       <p>{task.description}</p>
+      <small>{task.id.toString().slice(8, -1)}</small>
     </div>
   );
 }
