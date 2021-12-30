@@ -19,8 +19,7 @@ export function App({ title }: Props) {
     },
   ]);
 
-  const addANewTask = (task: Task) =>
-    setTasks([...tasks, { ...task, completed: false }]);
+  const addANewTask = (task: Task) => setTasks([...tasks, task]);
 
   const deleteATask = (id: number) => {
     setTasks(tasks.filter((task) => task.id !== id));
@@ -41,10 +40,10 @@ export function App({ title }: Props) {
       </nav>
       <main className="container p-4">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 mt-4">
             <TaskForm addANewTask={addANewTask} />
           </div>
-          <div className="col-md-8">
+          <div className="col-md-8 mt-4">
             <div className="row">
               <TaskList tasks={tasks} deleteATask={deleteATask} />
             </div>
