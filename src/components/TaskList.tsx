@@ -7,11 +7,18 @@ interface Props {
 }
 
 export default function TaskList({ tasks, deleteATask }: Props) {
+  let sortedTasks = [...tasks];
+  sortedTasks = tasks.sort((a, b) =>
+    a.completed === b.completed ? 0 : a.completed ? 1 : -1
+  );
+
+  console.log(sortedTasks);
+
   return (
     <>
       <h3>All tasks</h3>
-      {tasks.map((task) => (
-        <div className="col-md-4 pb-2" key={task.id.valueOf()}>
+      {sortedTasks.map((task) => (
+        <div className="col-md-6 pb-2" key={task.id.valueOf()}>
           <TaskCard task={task} deleteATask={deleteATask} />
         </div>
       ))}
