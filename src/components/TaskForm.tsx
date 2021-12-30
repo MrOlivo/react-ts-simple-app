@@ -49,7 +49,7 @@ export default function TaskForm({ addANewTask }: Props) {
             value={task.description}
             required
           ></textarea>
-          <button type="button" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary">
             Add task
           </button>
         </form>
