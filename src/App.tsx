@@ -12,7 +12,7 @@ interface Props {
 export function App({ title }: Props) {
   const [tasks, setTasks] = useLocalStorage<Task[]>("tasks", [
     {
-      id: 1,
+      id: new Date().getTime(),
       title: "Add more tasks",
       description: "Use the form for add more tasks",
       completed: false,
@@ -22,10 +22,14 @@ export function App({ title }: Props) {
   const addANewTask = (task: Task) => setTasks([...tasks, task]);
 
   const deleteATask = (id: number) => {
-    setTasks(tasks.filter((task) => task.id !== id));
+    let updateList = tasks.map((item) => {
+      return {
+        ...item,
+        completed: item.id === id ? !item.completed : item.completed,
+      };
+    });
+    setTasks(updateList);
   };
-
-  console.log(tasks);
 
   return (
     <div>
